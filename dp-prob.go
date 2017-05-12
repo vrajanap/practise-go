@@ -1,8 +1,12 @@
 package main
-import ("fmt" )
+import ("fmt")
 
 var m = map[int] int {} 
 func solve (n int) int { 
+	if n == 1 { 
+		return 0
+	} 
+	
 	if m[n] != 0 { 
 		return m[n]
 	}
@@ -25,9 +29,9 @@ func solve (n int) int {
 
 
 func main() {
-	
-	fmt.Println("%v\n", solve(9))
-	
+	var m int
+	fmt.Scanf("%d", &m)
+	fmt.Println(solve(m))
 }
 
 
